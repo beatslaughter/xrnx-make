@@ -1,0 +1,49 @@
+{
+  "favoritesPanel.commands": [
+    {
+      "label": "Tasks",
+      "commands": [
+        {
+          "label": "Install and package for Renoise",
+          "icon": "console",
+          "iconColor": "terminal.ansiBrightCyan",
+          "sequence": [
+            {
+              "command": "runCommand",
+              "arguments": [
+                "workbench.action.terminal.focus"
+              ]
+            },
+            {
+              "command": "runCommand",
+              "arguments": [
+                "workbench.action.terminal.renameWithArg",
+                {
+                  "name": "xrnx-make"
+                }
+              ]
+            },
+            {
+              "command": "runCommand",
+              "arguments": [
+                "workbench.action.terminal.sendSequence",
+                {
+                  "text": "lua xrnx-make.lua\r"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Start Renoise",
+          "command": "run",
+          "icon": "music",
+          "iconColor": "terminal.ansiBrightMagenta",
+          "arguments": [
+            "\"%PROGRAMFILES%\\Renoise\\Renoise.exe\""
+          ]
+        }
+      ]
+    }
+  ]
+}

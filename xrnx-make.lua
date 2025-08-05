@@ -2,7 +2,7 @@
 
   Author : Alexander Stoica
   Creation date : 08/01/2025
-  Last modified : 08/05/2025
+  Last modified : 08/06/2025
 
   https://renoise.github.io/xrnx/start/tool.html
 
@@ -189,8 +189,10 @@ elseif OS == "LINUX" then
   -- todo
 end
 if #directories > 0 then
+  local script_found, tool_found = false, false
   for _, directory in pairs(directories) do
     if string.lower(directory) == string.lower(SCRIPT_FOLDER_NAME) then
+      script_found = true
       print("\nA project script folder was found.")
       print('Copying the contents of ./' .. SCRIPT_FOLDER_NAME .. '/ to '
         .. RENOISE_PREFERENCES .. RENOISE_VERSION .. '/Scripts/'
@@ -213,6 +215,7 @@ if #directories > 0 then
         -- todo
       end
     elseif string.lower(directory) == string.lower(TOOL_FOLDER_NAME) then
+      tool_found = true
       print("\nA project tool folder was found.")
       local filenames = {}
       if OS == "WINDOWS" then
@@ -510,6 +513,11 @@ if #directories > 0 then
         -- todo
       end
     end
+  end
+  if not script_found and not tool_found then
+    print('\nFolder "' .. SCRIPT_FOLDER_NAME .. '" or "' .. TOOL_FOLDER_NAME
+      .. '" not found, nothing to do.\n'
+    )
   end
 end
 
