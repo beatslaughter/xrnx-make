@@ -12,14 +12,14 @@ To not rely on any additional Lua libraries it spawns various command line tools
 
 Create a folder for your project anywhere you like and copy xrnx-make.lua into the folder. Open the Lua script and adjust the variables at the top for proper generation of a manifest.xml required by Renoise tools. You can also customize a few options like the names of the folders this script uses.
 
-The script supports Renoise tools, but also Renoise terminal scripts. If you want to create a tool, then create a subfolder "tool", which will hold any of your tool files. If you want to create a terminal script, then create a folder "script". You can also have both folders active at the same time. Any additional folders you create inside the project folder will be ignored by the script. Upon successful packaging of your tool, you'll find an "out" folder contaning the *.xrnx file.
+The script supports Renoise tools, but also Renoise terminal scripts. If you want to create a tool, then create a subfolder "tool", which will hold any of your tool files. If you want to create a terminal script, then create a folder "script". You can also have both folders active at the same time. Any additional folders you create inside the project folder will be ignored by the script. Upon successful packaging of your tool, you'll find an "out" folder containing the *.xrnx file.
 
 >Your project folder tree looks like this then:  
 >  
 >[my-project]  
 ├ [out] - contains versioned *.xrnx files  
 ├ [script] - the content of this folder will be copied into the Renoise Scripts folder  
-├ [tool] - the content of this folder will be installed as tool into Renoise and packaged  
+├ [tool] - the content of this folder will be installed as a tool into Renoise and then packaged  
 └ xrnx-make.lua
 
 Once you have your project folders in place and customized all the various manifest.xml options, you can run the script. Here is a detailed breakdown of what it does:
