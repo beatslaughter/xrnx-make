@@ -270,12 +270,13 @@ if #directories > 0 then
       local h = io.open("./" .. TOOL_FOLDER_NAME .. "/manifest.xml", "w+")
       if h ~= nil then
         local function xml_encode(string, tag)
-          string:gsub('"', "&quot;")
-          string:gsub("'", "&apos;")
-          string:gsub("<", "&lt;")
-          string:gsub(">", "&gt;")
-          string:gsub("&", "&amp;")
-          return '  <' .. tag .. '>' .. string .. '</' .. tag .. '>\n'
+          local output = string
+          output = output:gsub('"', "&quot;")
+          output = output:gsub("'", "&apos;")
+          output = output:gsub("<", "&lt;")
+          output = output:gsub(">", "&gt;")
+          output = output:gsub("&", "&amp;")
+          return '  <' .. tag .. '>' .. output .. '</' .. tag .. '>\n'
         end
         h:write('<?xml version="1.0" encoding="UTF-8"?>\n')
         h:write('<RenoiseScriptingTool doc_version="0">\n')
