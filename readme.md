@@ -37,8 +37,8 @@ Once you have your project folders in place and customized all the various manif
 - If no **"main.lua"** is found, then the script will generate a basic file as a starting point. The **"manifest.xml"** file will always be written, so be careful to only customize any options inside the script and not directly in the XML file.
 
 - There is some additional checks for the optional files **"cover.png"**, **"thumbnail.png"**, **"readme.md"** and the **"license"** file.
-<br>
-<br>
+<br><br>
+
 >Additional reference:<br>
 >https://renoise.github.io/xrnx/start/tool.html
 
