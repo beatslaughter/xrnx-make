@@ -10,7 +10,7 @@
 
 -- Set the variables below as needed.
 
---[[ manifest.xml required ]]-----------------------------------------------]]--
+--[[ manifest.xml required ]]---------------------------------------------------
 
 -- Should match the folder name of your tool exactly, without the .xrnx at the
 -- end.
@@ -35,7 +35,7 @@ local MANIFEST_AUTHOR = "Your Name [your@email.com]"
 -- can change it anytime you feel like it.
 local MANIFEST_NAME = "Hello World"
 
---[[ manifest.xml optional ]]-----------------------------------------------]]--
+--[[ manifest.xml optional ]]---------------------------------------------------
 
 -- One or more categories for your tool, separated via comma, which will be used
 -- to categorize your tool on the official Tools page if you ever decide to
@@ -83,7 +83,7 @@ local MANIFEST_REPOSITORY = ""
 -- A URL to a website where donations can be made to support your tool.
 local MANIFEST_DONATE = ""
 
---[[ customizable globals ]]------------------------------------------------]]--
+--[[ customizable globals ]]----------------------------------------------------
 
 -- Either WINDOWS, MACINTOSH or LINUX, should be autodetected but can be set
 -- manually.
@@ -111,7 +111,7 @@ local OUTPUT_FOLDER_NAME = "out"
 -- Remove preferences.xml before copying and packing the tool.
 local CLEAN_PREFERENCES_XML = true
 
---[[ code ]]----------------------------------------------------------------]]--
+--[[ code ]]--------------------------------------------------------------------
 
 print("xrnx-make.lua running...\n")
 
@@ -521,6 +521,6 @@ if #directories > 0 then
   end
 end
 
--- todo?: start renoise
+-- todo?: start Renoise
 
---[[-----------------------------------------------------------------[[ EOF ]]--
+---------------------------------------------------------------------[[ EOF ]]--
